@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Content, Title, PublishButton, Counter} from './index';
+import {Content, Title, PublishButton, Counter, ToggleOpen} from './index';
 
 const Article = (props) => {
   const [isPublished, setIsPublished] = useState(false)
@@ -12,6 +12,7 @@ const Article = (props) => {
       <Content content={props.content} />
       <PublishButton isPublished={isPublished} onClick={() => publishArticle()} />
       <Counter />
+      <ToggleOpen />
     </div>
   );
 };
